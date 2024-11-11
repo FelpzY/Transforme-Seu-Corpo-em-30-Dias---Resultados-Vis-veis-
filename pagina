@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transforme Seu Corpo em 30 Dias - Resultados Visíveis!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8f0; /* Cor de fundo suave e clara */
+      color: #333;
+    }
+
+    /* Cabeçalho */
+    .header {
+      background: linear-gradient(135deg, #1abc9c, #16a085); /* Gradiente em tons de verde */
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 30px auto;
+      max-width: 1100px;
+    }
+
+    .header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .header p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    .cta {
+      background-color: #e74c3c;
+      color: white;
+      padding: 18px 40px;
+      text-decoration: none;
+      font-size: 22px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #c0392b;
+    }
+
+    /* Estilo geral das seções */
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #ffffff;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 1100px;
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Método Detalhado */
+    .method ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .method li {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .method li:before {
+      content: '✔️';
+      margin-right: 10px;
+      color: #1abc9c;
+    }
+
+    /* Guia para Dieta */
+    .guide {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .guide-item {
+      background-color: #fff;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      border-radius: 10px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .guide-item:hover {
+      transform: scale(1.05);
+      background-color: #f4f9f4; /* Fundo suave ao passar o mouse */
+    }
+
+    .guide-item h3 {
+      font-size: 24px;
+      color: #16a085; /* Tom de verde mais vibrante */
+      margin-bottom: 10px;
+    }
+
+    .guide-item p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Antes e Depois */
+    .before-after {
+      width: 80%;
+      margin: 40px auto;
+    }
+
+    .slick-slide img {
+      width: 60%;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: 5px solid #1abc9c; /* Borda em tom de verde */
+    }
+
+    /* Testemunhos */
+    .testimonials {
+      padding: 60px 20px;
+      margin-top: 60px;
+      background-color: #16a085;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial {
+      display: inline-block;
+      width: 100%;
+      padding: 20px;
+      margin: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      height: 100%;
+      border: 3px solid #ddd;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: #555;
+      font-size: 16px;
+    }
+
+    /* Desvantagens */
+    .disadvantages {
+      background-color: #fff;
+      padding: 40px 20px;
+      margin-top: 60px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .disadvantages h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .disadvantages ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .disadvantages li {
+      font-size: 18px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .disadvantages li:before {
+      content: '❌';
+      margin-right: 15px;
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    /* Mensagem Motivadora */
+    .motivational-message {
+      background: linear-gradient(135deg, #1abc9c, #16a085); /* Gradiente de verde */
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 60px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .motivational-message h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .motivational-message p {
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    /* Rodapé */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    /* Design responsivo */
+    @media (max-width: 768px) {
+      .before-after {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .before-after img {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      .testimonial {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      .cta {
+        font-size: 18px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>Transforme Seu Corpo em 30 Dias - Resultados Visíveis!</h1>
+    <p>Emagreça de forma rápida e saudável, com o método comprovado por milhares de pessoas. Sem dietas malucas, sem academia, apenas o que você já tem em casa!</p>
+    <a href="#compra" class="cta">Comece Agora e Veja os Resultados!</a>
+  </div>
+
+  <!-- Benefícios -->
+  <div class="section">
+    <h2>Por que este método funciona?</h2>
+    <p><strong>Sem academia. Sem dieta restritiva. Apenas resultados reais e rápidos!</strong></p>
+    <p>Este método exclusivo combina alimentação inteligente com hábitos simples, permitindo que você perca peso de forma eficaz, sem precisar sair de casa ou passar horas na academia. Não há truques, apenas um sistema comprovado para transformar seu corpo.</p>
+  </div>
+
+  <!-- Detalhamento do Método -->
+  <div class="section method">
+    <h2>Como Funciona o Método?</h2>
+    <ul>
+      <li>Adote hábitos saudáveis ​​de forma simples e eficazes, sem dietas malucas.</li>
+      <li>Aprenda a comer o que gosta sem culpa, comendo de forma equilibrada.</li>
+      <li>Exercícios simples, que podem ser feitos em casa, sem equipamentos caros.</li>
+      <li>Acompanhamento de perto com dicas valiosas para acelerar os resultados.</li>
+      <li>O foco é na perda de peso saudável, garantindo um ganho de eficiência.</li>
+    </ul>
+  </div>
+
+  <!-- Guia para Dieta -->
+  <div class="section guide">
+    <h2>Você Vai Receber um Guia para Facilitar Sua Dieta!</h2>
+    <p>Com o nosso guia exclusivo, você terá acesso a funcionalidades poderosas que vão tornar a sua jornada de emagrecimento mais fácil e eficiente. Acompanhe sua alimentação, registre seus exercícios, e fique sempre motivado(a)!</p>
+    <div class="guide-item">
+      <h3>Receitas Práticas</h3>
+      <p>DIVERSAS opções de receitas Low Carb e Detox, incluindo pães, bolos, doces, sopas, sucos, shakes e muito mais!</p>
+    </div>
+    <div class="guide-item">
+      <h3>Exercícios Funcionais</h3>
+      <p>Vários exercícios, que você pode fazer em casa ou na academia, sem necessidade de personal trainer.</p>
+    </div>
+    <div class="guide-item">
+      <h3>Planos Alimentares</h3>
+      <p>Diversas opções de planos alimentares para diversas necessidades, como Dieta 1200kcal, Dieta do Ovo, e muito mais.</p>
+    </div>
+  </div>
+
+  <!-- Antes e Depois -->
+  <div class="section before-after">
+    <div class="slick-carousel">
+      <div><img src="https://i.pinimg.com/564x/17/57/ef/1757efa1c0f92772680798751d76548f.jpg" alt="Antes"></div>
+      <div><img src="https://i.pinimg.com/564x/f5/0f/66/f50f66f67adaf4043ae8503a022fc131.jpg" alt="Depois"></div>
+      <div><img src="https://i.pinimg.com/564x/70/7b/12/707b12b4d2428f7d735a2f5c2d75e80f.jpg" alt="Antes"></div>
+      <div><img src="https://i.pinimg.com/736x/58/74/8d/58748d44cfef4cd3f4d5ceb34212c52e.jpg" alt="Depois"></div>
+      <div><img src="https://i.pinimg.com/564x/fc/e7/76/fce776e5b25ffca4372b24d207f995af.jpg" alt="Antes"></div>
+      <div><img src="https://i.pinimg.com/564x/6a/ee/3a/6aee3a141d7339f6badff37224c21764.jpg" alt="Depois"></div>
+    </div>
+  </div>
+
+  <!-- Testemunhos - Carrossel -->
+  <div class="section testimonials">
+    <h2>Veja o que nossos clientes estão falando</h2>
+    <div class="slick-carousel testimonial-carousel">
+      <div class="testimonial">
+        <p>"Nunca imaginei que seria tão fácil! Em 30 dias, consegui perder 12kg e me sentir mais saudável!" - João S.</p>
+      </div>
+      <div class="testimonial">
+        <p>"Eu odiava dietas malucas. Com esse método, emagreci 10kg de forma natural e sem sofrimento!" - Maria L.</p>
+      </div>
+      <div class="testimonial">
+        <p>"Sou mãe e após a gravidez, a flacidez abdominal estava me incomodando muito. Perdi 8kg e a flacidez diminuiu significativamente!" - Juliana M.</p>
+      </div>
+      <div class="testimonial">
+        <p>"Consegui eliminar a gordura abdominal que tanto me incomodava, me senti mais confiante e cheio de energia!" - Rafael A.</p>
+      </div>
+      <div class="testimonial">
+        <p>"Em apenas 30 dias, vi minha barriga desaparecer e meu corpo se tonificar. O método é simples e funciona!" - Mariana P.</p>
+      </div>
+      <div class="testimonial">
+        <p>"Estava com dificuldades para emagrecer após o parto, mas com o método, consegui perder 7kg e agora me sinto incrível!" - Paula R.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desvantagens de Não Adquirir o Método -->
+  <div class="section disadvantages">
+    <h2>O Que Você Perde ao Não Adquirir Este Método?</h2>
+    <ul>
+      <li>❌ Continue lutando contra dietas ineficazes e métodos que não funcionam.</li>
+      <li>❌ Perder mais tempo e dinheiro com soluções temporárias e caras.</li>
+      <li>❌ Sentir-se frustrado(a) ao não alcançar o corpo dos seus sonhos.</li>
+      <li>❌ Ficar preso(a) a métodos que exigem academia ou dietas impossíveis de manter.</li>
+      <li>❌ Perder a oportunidade de transformar sua vida de forma simples e rápida.</li>
+    </ul>
+  </div>
+
+  <!-- Mensagem Motivadora -->
+  <div class="section motivational-message">
+    <h2>Transforme Seu Corpo e Sua Vida Agora!</h2>
+    <p>O momento de mudança é agora! Não espere mais para alcançar o corpo e a saúde que você sempre sonhou. Com nosso método simples e eficaz, você pode ver resultados visíveis em apenas 30 dias. Comece sua transformação hoje e sinta a diferença!</p>
+    <a href="#compra" class="cta">Comece Sua Jornada Agora!</a>
+  </div>
+
+  <!-- Aviso Legal -->
+  <div class="section footer">
+    <p>© 2024 Transforme Seu Corpo. Todos os direitos reservados.</p>
+    <p><strong>AVISO LEGAL:</strong> O conteúdo deste site é apenas para fins informativos e não pretende ser um substituto para aconselhamento médico profissional, diagnóstico ou tratamento. Sempre procure o conselho de seu médico ou outro profissional de saúde qualificado sobre uma condição médica, suspeita de condição médica e antes de iniciar qualquer dieta, exercício ou programa de suplementação, ou antes de tomar ou interromper qualquer medicação. A confiança em qualquer informação fornecida por este site e outras que aparecem no site é exclusivamente por sua conta e risco. O site e seu conteúdo são fornecidos “como estão”.</p>
+    <p>Aviso: Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slick-carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        arrows: false
+      });
+
+      $('.testimonial-carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        arrows: false
+      });
+    });
+  </script>
+</body>
+</html>
